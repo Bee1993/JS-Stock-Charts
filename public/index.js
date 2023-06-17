@@ -35,11 +35,12 @@ async function main() {
             datasets: stocks.map( stock => ({
                 label: stock.meta.symbol,
                 data: stock.values.map(value => parseFloat(value.high)),
-                backgroundColor:  _,
-                borderColor: _,
+                backgroundColor:  getColor(stock.meta.symbol),
+                borderColor: getColor(stock.meta.symbol),
             }))
         }
     });
+    
     
 }                                             
 
